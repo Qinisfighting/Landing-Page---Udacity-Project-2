@@ -8,11 +8,12 @@
 
 - The page is based on the starter project offered by Udacity and aimed to meet all the requirements in the project rubric.
 
-- I've tired my best to develope the five "Suggested" Items in the Development Strategy section, but eventually was only able to finish three, they are:
+- I've tired my best to develope the five "Suggested" Items in the Development Strategy section, but eventually was only able to four, they are:
 
     - Add a scroll to top button
     - Update/change the design/content
     - Make sections collapsible
+    - Highlight the active section in Navbar
 
 The Reference sources were added in the JavaScript comments. 
 
