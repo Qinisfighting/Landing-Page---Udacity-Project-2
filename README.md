@@ -8,7 +8,7 @@
 
 - The page is based on the starter project offered by Udacity and aimed to meet all the requirements in the project rubric.
 
-- The five "Suggested" Items are included in the Project (not quite sure if they are all right...), they are:
+- The five "Suggested" Items are included in the Project (not quite sure if they are all correctly done though...), they are:
 
     - Add a scroll to top button
     - Update/change the design/content
