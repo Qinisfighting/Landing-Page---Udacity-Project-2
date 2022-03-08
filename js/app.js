@@ -22,7 +22,7 @@
  * Define Global Variables
  *
  */
-
+const header = document.querySelector(".page__header");
 const sections = document.querySelectorAll("section");
 const navbarLi = document.getElementById("navbar__list");
 let navList = "";
@@ -111,6 +111,22 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// Hide fixed Navigation bar while not scrolling
+
+let timeoutId;
+
+window.addEventListener("scroll", function () {
+  document.querySelector("header").style.top = "0";
+
+  clearTimeout(timeoutId);
+
+  if (window.pageYOffset !== 0) {
+    timeoutId = setTimeout(function () {
+      document.querySelector("header").style.top = "-100px";
+    }, 500);
+  }
+});
 
 //Get the scrollTop button:
 //https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
