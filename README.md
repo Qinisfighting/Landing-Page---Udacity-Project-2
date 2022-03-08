@@ -8,12 +8,13 @@
 
 - The page is based on the starter project offered by Udacity and aimed to meet all the requirements in the project rubric.
 
-- I've tired my best to develope the five "Suggested" Items in the Development Strategy section, but eventually was only able to four, they are:
+- The five "Suggested" Items are included in the Project (not quite sure if they are all right...), they are:
 
     - Add a scroll to top button
     - Update/change the design/content
     - Make sections collapsible
     - Highlight the active section in Navbar
+    - Hide navigation bar while not scrolling
 
 The Reference sources were added in the JavaScript comments. 
 
