@@ -55,13 +55,12 @@ function createNavbar() {
     //use html section tags and data-nav attribute to create navi bar list
 
     sectionName = section.getAttribute("data-nav");
-    navList += `<li> <a class="navbar__menu menu__link" href="#${section.id}">${sectionName}</a></li>`;
+    navList += `<li id="${sectionName}"> <a class="navbar__menu menu__link" href="#${section.id}">${sectionName}</a></li>`;
   });
   // add the tags to the inner htmls
   navbarLi.innerHTML = navList;
 }
 createNavbar();
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -72,7 +71,15 @@ createNavbar();
 
 function sectionInViewport(section) {
   const sectionInV = section.getBoundingClientRect();
-  // the section is active when top >= 0
+  //the section is active when sectionInV.top >= 0;
+  if (sectionInV.bottom < 0) return false;
+
+  if (sectionInV.top > window.innerHeight) return false;
+
+  if (sectionInV.bottom < window.innerHeight  / 2) return false;
+
+  if (sectionInV.top < window.innerHeight / 2) return true;
+
   return sectionInV.top >= 0;
 }
 
@@ -82,12 +89,14 @@ function makeActive() {
   for (const section of sections) {
     if (sectionInViewport(section)) {
       const id = section.getAttribute("id");
+      sectionName = section.getAttribute("data-nav");
       section.classList.add("your-active-class");
-      document.querySelector(`.${id}`).classList.add("nav_active");
+      document.querySelector(`#${sectionName}`).classList.add("nav_active");
     } else {
       const id = section.getAttribute("id");
+      sectionName = section.getAttribute("data-nav");
       section.classList.remove("your-active-class");
-      document.querySelector(`.${id}`).classList.remove("nav_active");
+      document.querySelector(`#${sectionName}`).classList.remove("nav_active");
     }
   }
 }
@@ -124,7 +133,7 @@ window.addEventListener("scroll", function () {
   if (window.pageYOffset !== 0) {
     timeoutId = setTimeout(function () {
       document.querySelector("header").style.top = "-100px";
-    }, 500);
+    }, 1200);
   }
 });
 
