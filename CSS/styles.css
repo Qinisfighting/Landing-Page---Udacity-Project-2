@@ -89,6 +89,7 @@ section {
   background: #333;
   color: #fff;
   transition: ease 0.3s all;
+  border-radius: 20px;
 }
 
 /* highlighted active Navbar */
@@ -96,8 +97,8 @@ section {
 .navbar__menu .nav_active {
   background-color: #fff;
   border-radius: 20px;
+  transition: ease 0.3s all;
   margin: 5px;
-  transition: 0.3s;
 }
 
 /* Header Styles */
