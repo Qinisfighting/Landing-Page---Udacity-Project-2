@@ -26,18 +26,18 @@ const header = document.querySelector(".page__header");
 const sections = document.querySelectorAll("section");
 const navbarLi = document.getElementById("navbar__list");
 let navList = "";
-// change head title's text
 const hTitle = document.getElementById("head_title");
-// change the header background color
 const pageHeader = document.querySelector(".page__header");
-// change title's text
 const title = document.getElementById("my_title");
-// change body background color
 const bodyBackground = document.querySelector("body");
 
+// change head title's text
 hTitle.textContent = `Udacity's Project 2 - Manipulating the DOM`;
+// change the header background color
 pageHeader.style.background = "#f4a460";
+// change title's text
 title.textContent = `Qin's Landing Page`;
+// change body background color
 bodyBackground.style.background = "rgb(251,183,45)";
 bodyBackground.style.background =
   "linear-gradient(0deg, rgba(251,183,45,0.7654412106639531) 0%, rgba(223,30,30,0.9475140397956058) 100%)";
@@ -73,11 +73,8 @@ function sectionInViewport(section) {
   const sectionInV = section.getBoundingClientRect();
   //the section is active when sectionInV.top >= 0;
   if (sectionInV.bottom < 0) return false;
-
   if (sectionInV.top > window.innerHeight) return false;
-
-  if (sectionInV.bottom < window.innerHeight  / 2) return false;
-
+  if (sectionInV.bottom < window.innerHeight / 2) return false;
   if (sectionInV.top < window.innerHeight / 2) return true;
 
   return sectionInV.top >= 0;
@@ -163,12 +160,4 @@ function topFunction() {
 
 /**
  * End Main Functions
- * Begin Events
- *
  */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
