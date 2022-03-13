@@ -2,21 +2,29 @@
 
 ### Landing Page - Udacity's Project 2
 
-- The second Project of Front End Web Developer Nanodegree Program from Udacity.
-
-- A multi-section landing page, a real-world scenario of manipulating the DOM and a opportunity for me to test my skills to fully combine HTML, CSS, and JavaScript into a large project. 
+- The second Project of Front End Web Developer Nanodegree Program from Udacity. 
 
 - The page is based on the starter project offered by Udacity and aimed to meet all the requirements in the project rubric.
 
-- The five "Suggested" Items are included in the Project (not quite sure if they are all correctly done though...), they are:
+- Technologies used
+
+    - HTML
+    - CSS
+    - JavaScript
+    - Web API
+
+- Out of the four "Make Your Project Stand Out"suggestions, three were achieved, they are:
 
     - Add a scroll to top button
     - Update/change the design/content
-    - Make sections collapsible
-    - Highlight the active section in Navbar
     - Hide navigation bar while not scrolling
+         
+     
 
-The Reference sources were added in the JavaScript comments. 
+- Dependencies:
+
+    - [Udacity landing-page starter code](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
+    - [Get the scrollTop button](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
 
 
 
@@ -26,8 +34,6 @@ The Reference sources were added in the JavaScript comments.
 
 
 
-### Adding new features, fixing bugs or any other questions
-
-Please feel free to contact me by email: yq.qualmann@gmail.com
+### Adding new features, fixing bugs or any other questions,Please feel free to contact me: **Yanqin Q** (*yq.qualmann@gmail.com*)
 
 
