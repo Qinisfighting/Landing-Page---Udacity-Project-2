@@ -103,6 +103,8 @@ function makeActive() {
 
 document.addEventListener("scroll", makeActive);
 
+// Hide navigation bar while not scrolling
+
 let timeoutId;
 
 window.addEventListener("scroll", function () {
