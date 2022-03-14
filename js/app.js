@@ -61,6 +61,9 @@ function createNavbar() {
   navbarLi.innerHTML = navList;
 }
 createNavbar();
+
+//build a scroll function
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -73,9 +76,9 @@ function sectionInViewport(section) {
   const sectionInV = section.getBoundingClientRect();
   //the section is active when sectionInV.top >= 0;
   if (sectionInV.bottom < 0) return false;
-  if (sectionInV.top > window.innerHeight) return false;
+  if (sectionInV.top > window.innerHeight / 2) return false;
   if (sectionInV.bottom < window.innerHeight / 2) return false;
-  if (sectionInV.top < window.innerHeight / 2) return true;
+  if (sectionInV.top < window.innerHeight) return true;
 
   return sectionInV.top >= 0;
 }
@@ -100,26 +103,6 @@ function makeActive() {
 
 document.addEventListener("scroll", makeActive);
 
-//make sections collapsible
-//https://www.w3schools.com/howto/howto_js_collapsible.asp
-
-const coll = document.getElementsByClassName("collapsible");
-let i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    const landing__container = this.nextElementSibling;
-    if (landing__container.style.display === "block") {
-      landing__container.style.display = "none";
-    } else {
-      landing__container.style.display = "block";
-    }
-  });
-}
-
-// Hide fixed Navigation bar while not scrolling
-
 let timeoutId;
 
 window.addEventListener("scroll", function () {
@@ -130,7 +113,7 @@ window.addEventListener("scroll", function () {
   if (window.pageYOffset !== 0) {
     timeoutId = setTimeout(function () {
       document.querySelector("header").style.top = "-100px";
-    }, 1200);
+    }, 2200);
   }
 });
 
@@ -154,10 +137,11 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
-
 /**
  * End Main Functions
  */
