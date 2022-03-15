@@ -21,7 +21,7 @@
          
      
 
-- Dependencies:
+-  References and dependencies:
 
     - [Udacity landing-page starter code](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
     - [Get the scrollTop button](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
