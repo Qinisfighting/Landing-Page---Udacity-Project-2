@@ -62,7 +62,22 @@ function createNavbar() {
 }
 createNavbar();
 
-//build a scroll function
+/*build a scroll function, here I need help!
+
+
+const clickItems = document.querySelectorAll('a[href="#${section.id}]');
+
+function scroll(clickItem, section){
+for (const clickItem of clickItems) {
+      clickItem.addEventListener("click", function(e){
+		e.preventDefault();
+		section.scrollIntoView({behavior: "smooth"});
+	});
+  }
+
+}
+
+*/
 
 /**
  * End Helper Functions
