@@ -62,26 +62,6 @@ function createNavbar() {
 }
 createNavbar();
 
-/*build a scroll function, here I need help!
-
-
-const clickItems = document.querySelectorAll(".menu__link");
-
-for (const clickItem of clickItems) {
-  clickItem.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(e.currentTarget.dataset.href).scrollIntoView({ behavior: "smooth" });
-  });
-}
-
-*/
-
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
-
 //detecting the active section by using Element.getBoundingClientRect() method
 
 function sectionInViewport(section) {
@@ -109,6 +89,13 @@ function makeActive() {
       sectionName = section.getAttribute("data-nav");
       section.classList.remove("your-active-class");
       document.querySelector(`#${sectionName}`).classList.remove("nav_active");
+      //build the scroll function
+      document
+        .querySelector(`#${sectionName}`)
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          section.scrollIntoView({ behavior: "smooth" });
+        });
     }
   }
 }
@@ -127,7 +114,7 @@ window.addEventListener("scroll", function () {
   if (window.pageYOffset !== 0) {
     timeoutId = setTimeout(function () {
       document.querySelector("header").style.top = "-100px";
-    }, 2200);
+    }, 3000);
   }
 });
 
