@@ -30,7 +30,7 @@
 
 ### Demo-Preview
 
-![Landing Page Demo](https://github.com/Qinisfighting/Demo/blob/a9325404b671787ac7d141951bfa74fd8b01494a/landingPageDemo.JPG)
+![Landing Page Demo](https://github.com/Qinisfighting/Landing-Page---Udacity-Project-2/blob/main/landingPageDemo.jfif)
 
 
 
